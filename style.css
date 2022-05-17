@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  
+  font-size: 59.5%;
+
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #06113C;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #06113C;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem;
+    
+  
+}
+.title-box{
+    background-color: #FF8C32;
+    color:#151515;
+    padding: 1.5rem 8rem;
+    font-size:1.5rem;
+    text-align: center;
+    
+    align-self: center;
+    
+}
+
+.cards{
+    display: flex;
+    justify-content:space-evenly;
+}
+.card-image{
+    height: 24rem;
+    width: 22.5rem;
+   
+    border-radius: 50%;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.name{
+    padding:2rem;
+}
+.candidateName{
+    color:white;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 3rem;
+}
+.count-box{
+    border-top:3px solid white;
+    border-bottom:3px solid white;
+    padding: 1.5rem 3rem;
+    color:white;
+    font-size:2.8rem;
+
+}
+.status-box{
+    background-color: #F55353;
+    padding:1rem;
+    align-self: center;
+}
+.update{
+    color:white;
+    font-size: 2rem;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    
+    
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media (max-width: 970px) {
+    html{
+        font-size: 56.5%;
+    }
+    
+    .card-image{
+        height: 20rem;
+        width: 18rem;
+    }
+}
+@media (max-width: 750px) {
+    html{
+        font-size: 50.5%;
+    }
+    body{
+        background-color: #06113C;
+    
+    }
+    .container{
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+    }
+    .title-box{
+        margin-bottom: 5rem;
+        font-size: 1.3rem;
+        padding: 1.5rem 1.5rem;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    .card-image{
+        height: 20rem;
+        width: 18.3rem;
+    }
+    .count-box{
+        border:none;
+        padding-left:9rem;
+        padding-right: 9rem;
+        border-bottom: 2px solid white;
+        margin-bottom: 7rem;
+        
+    }
+    .card{
+        justify-content:space-between;
+    }
+    .footer{
+        margin-top: 5rem;
+    }
+}
