@@ -1,7 +1,19 @@
 "use strict";
-const Balen = document.querySelector(".countBalen");
-const Sthapit = document.querySelector(".countSthapit");
-const Sirjana = document.querySelector(".countSirjana");
+
+const firstName = document.querySelector(".firstName");
+const secondName = document.querySelector(".secondName");
+const thirdName = document.querySelector(".thirdName");
+const arrName = [firstName, secondName, thirdName];
+
+const firstVotes = document.querySelector(".countFirst");
+const secondVotes = document.querySelector(".countSecond");
+const thirdVotes = document.querySelector(".countThird");
+const arrVotes = [firstVotes, secondVotes, thirdVotes];
+
+const firstImage = document.querySelector(".firstImage");
+const secondImage = document.querySelector(".secondImage");
+const thirdImage = document.querySelector(".thirdImage");
+const arrImage = [firstImage, secondImage, thirdImage];
 const time = document.querySelector(".update");
 
 const renderVotes = function (data) {
@@ -12,9 +24,12 @@ const renderVotes = function (data) {
     date.getHours() < 12 ? "am" : "pm"
   }`;
   time.textContent = timeHTML;
-  Balen.textContent = data[0].votes;
-  Sthapit.textContent = data[1].votes;
-  Sirjana.textContent = data[2].votes;
+
+  for (let i = 0; i < arrName.length; i++) {
+    arrName[i].textContent = data[i].name;
+    arrVotes[i].textContent = data[i].votes;
+    arrImage[i].src = `images\\${data[i].name.split(" ")[0]}.jpg`;
+  }
 };
 const getCount = function () {
   const request = new XMLHttpRequest();
